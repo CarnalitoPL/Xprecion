@@ -38,10 +38,10 @@
             </Button>
         </ToolBar>
         <Label Content="ID" HorizontalAlignment="Left" Margin="81,173,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Label Content="Tipo de rayos x" HorizontalAlignment="Left" Margin="81,240,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Tipo de rayos x" HorizontalAlignment="Left" Margin="81,318,0,0" VerticalAlignment="Top" FontSize="14"/>
         <TextBox x:Name="txtID" HorizontalAlignment="Left" Margin="232,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="31" FontSize="14"/>
-        <TextBox x:Name="txtRayosX" HorizontalAlignment="Left" Margin="232,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="31" FontSize="14"/>
-        <Label Content="Precio" HorizontalAlignment="Left" Margin="81,307,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="232,305,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="31" FontSize="14"/>
+        <TextBox x:Name="txtRayosX" HorizontalAlignment="Left" Margin="232,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="31" FontSize="14"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="81,251,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Margin="232,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144" Height="31" FontSize="14"/>
     </Grid>
 </Window>

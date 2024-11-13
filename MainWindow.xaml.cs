@@ -32,5 +32,12 @@ namespace Xprecion
             x.Show();
 
         }
+
+        private void MITipoDeRayosX_Click(object sender, RoutedEventArgs e)
+        {
+            Datos.frmTipoDeRayosX x = new Datos.frmTipoDeRayosX();
+            x.Owner = this;
+            x.Show();
+        }
     }
 }

@@ -12,7 +12,7 @@
             <MenuItem Header="Servicios">
                 <MenuItem x:Name="MIAreaMedica" Header="Áreas Medicas" Click="MIAreaMedica_Click">
                 </MenuItem>
-                <MenuItem Header="Tipo de Rayos X">
+                <MenuItem x:Name="MITipoDeRayosX" Header="Tipo de Rayos X" Click="MITipoDeRayosX_Click">
                 </MenuItem>
                 <MenuItem Header="Médico">
                 </MenuItem>
