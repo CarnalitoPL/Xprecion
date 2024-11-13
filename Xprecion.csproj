@@ -60,6 +60,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Datos\frmTipoDeRayosX.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Datos\SearchForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -74,9 +78,13 @@
     </Compile>
     <Compile Include="Clases\ClAreaMedica.cs" />
     <Compile Include="Clases\ClGlobales.cs" />
+    <Compile Include="Clases\ClTipoDeRayosX.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Datos\Area_medica.xaml.cs">
       <DependentUpon>Area_medica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\frmTipoDeRayosX.xaml.cs">
+      <DependentUpon>frmTipoDeRayosX.xaml</DependentUpon>
     </Compile>
     <Compile Include="Datos\SearchForm.xaml.cs">
       <DependentUpon>SearchForm.xaml</DependentUpon>

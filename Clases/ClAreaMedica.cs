@@ -40,19 +40,19 @@ namespace Xprecion.Clases
         }
         public string grabar()
         {
-            return ("sp_graba_paqueteria");
+            return ("sp_grabar_AREA_MEDICO");
         }
         public string consultar()
         {
-            return ("select * from AREA_MEDICO where ID_AREA = '" + this.ID_AREA1 + "'");
+            return ("select * from AREA_MEDICO where ID_AREA = '" + this.ID_AREA + "'");
         }
         public string modificar()
         {
-            return ("sp_modificar_paqueteria");
+            return ("sp_modificar_MEDICO_AREA");
         }
         public string borrar()
         {
-            return ("sp_borrar_shippers");
+            return ("sp_borrar_AREA_MEDICA");
         }
     }
 }
