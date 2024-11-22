@@ -6,49 +6,39 @@
         xmlns:local="clr-namespace:Xprecion"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
-    <Grid>
-        <Menu VerticalAlignment="Top" Background="LightGray">
-            <MenuItem Header="Inicio"/>
-            <MenuItem Header="Servicios">
-                <MenuItem x:Name="MIAreaMedica" Header="Áreas Medicas" Click="MIAreaMedica_Click">
-                </MenuItem>
-                <MenuItem x:Name="MITipoDeRayosX" Header="Tipo de Rayos X" Click="MITipoDeRayosX_Click">
-                </MenuItem>
-                <MenuItem Header="Médico">
-                </MenuItem>
-                <MenuItem Header="Añadir paciente">
-                </MenuItem>
+    <Grid Background="#F4F4F9">
+        <!-- Menú con fondo degradado y bordes -->
+        <Menu VerticalAlignment="Top" Background="#3498db" Height="70">
+            <!-- Aumenté la altura del menú -->
+            <MenuItem Header="Inicio" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
+            <!-- Ajusté el tamaño de la fuente, padding y altura -->
+            <MenuItem Header="Servicios" Foreground="White" FontSize="18" Padding="15,10" Height="50">
+                <MenuItem x:Name="MIAreaMedica" Header="Áreas Médicas" Click="MIAreaMedica_Click" Foreground="Black" FontSize="16" Padding="10,8"/>
+                <MenuItem x:Name="MITipoDeRayosX" Header="Tipo de Rayos X" Click="MITipoDeRayosX_Click" Foreground="Black" FontSize="16" Padding="10,8"/>
+                <MenuItem x:Name="MIMedico" Header="Médico" Click="MIMedico_Click" Foreground="Black" FontSize="16" Padding="10,8"/>
+                <MenuItem x:Name="MIPacientes" Header="Añadir paciente" Foreground="Black" FontSize="16" Padding="10,8" Click="MIPacientes_Click"/>
             </MenuItem>
-
-            <MenuItem Header="Citas Activas"/>
-            <MenuItem Header="Registrar Usuario"/>
-            <MenuItem Header="Iniciar Sesión"/>
+            <MenuItem Header="Agendar una cita" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
+            <MenuItem Header="Citas Activas" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
+            <MenuItem x:Name="Registros" Header="Últimos Registros" Click="Registros_Click" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
         </Menu>
-        <StackPanel Orientation="Vertical" Margin="0,30,0,0">
-            <ScrollViewer Height="383" Width="796">
-                <StackPanel Margin="20,10">
-                    <StackPanel x:Name="DynamicWidgets" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,20">
-                    </StackPanel>
-                    <Border x:Name="ComplaintForm" Visibility="Collapsed" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="10" Width="400">
-                        <StackPanel>
-                            <TextBlock Text="Buzón de Quejas" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
-                            <TextBox Text="Tu nombre" Margin="0,5"/>
-                            <TextBox Text="ejemplo@correo.com" Margin="0,5"/>
-                            <TextBox Text="Escribe tu queja o sugerencia" Margin="0,5" Height="100"/>
-                            <Button Content="Enviar Queja" Margin="0,5" HorizontalAlignment="Center"/>
-                        </StackPanel>
-                    </Border>
 
-
-                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Padding="20" Height="162" Width="730">
-                        <StackPanel HorizontalAlignment="Center">
-                            <TextBlock Text="Bienvenido a XPRECION" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
-                            <TextBlock Text="Centro Médico especializado en brindar servicios de salud de alta calidad." TextAlignment="Center"/>
-                            <Image Width="290" Height="112" Source="/Datos/logo.jpg"/>
-                        </StackPanel>
-                    </Border>
+        <!-- Contenedor de los widgets dinámicos con márgenes ajustados -->
+        <StackPanel Orientation="Vertical" Margin="13,69,27,-39">
+            <StackPanel Margin="0,0,0,20">
+                <StackPanel x:Name="DynamicWidgets" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,20">
                 </StackPanel>
-            </ScrollViewer>
+
+                <!-- Caja de bienvenida con bordes redondeados y sin tamaño fijo -->
+                <Border BorderBrush="#3498db" BorderThickness="2" CornerRadius="10" Padding="20" Background="White"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Bienvenido a XPRECION" FontSize="40" FontWeight="Bold" Foreground="#3498db" TextAlignment="Center"/>
+                        <TextBlock Text="Centro Médico especializado en brindar servicios de salud de alta calidad." TextAlignment="Center" Foreground="#7F8C8D" FontSize="20"/>
+                        <Image Source="/logo.jpg" Margin="10" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

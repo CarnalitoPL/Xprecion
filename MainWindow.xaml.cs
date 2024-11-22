@@ -39,5 +39,26 @@ namespace Xprecion
             x.Owner = this;
             x.Show();
         }
+
+        private void MIMedico_Click(object sender, RoutedEventArgs e)
+        {
+            Datos.frmMedico x = new Datos.frmMedico();
+            x.Owner = this;
+            x.Show();
+        }
+
+        private void Registros_Click(object sender, RoutedEventArgs e)
+        {
+            Datos.UltimosRegistros x = new Datos.UltimosRegistros();
+            x.Owner = this;
+            x.Show();
+        }
+
+        private void MIPacientes_Click(object sender, RoutedEventArgs e)
+        {
+            Datos.frmPacientes x = new Datos.frmPacientes();
+            x.Owner = this;
+            x.Show();
+        }
     }
 }

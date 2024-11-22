@@ -1,0 +1,45 @@
+﻿<Window x:Class="Xprecion.Datos.UltimosRegistros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Xprecion.Datos"
+        mc:Ignorable="d"
+        Title="UltimosRegistros" Height="450" Width="830">
+    <Grid>
+        <!-- Definimos filas con tamaños relativos -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Para los botones -->
+            <RowDefinition Height="*"/>
+            <!-- Para el DataGrid -->
+        </Grid.RowDefinitions>
+
+        <!-- Los botones en la primera fila -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <!-- Botón de Médicos -->
+            <Button x:Name="btnMedicos" Content="Médicos" Width="180" Height="50" Margin="10" 
+                Background="#FF7BA01D" Foreground="White" BorderBrush="#FF7BA01D" 
+                FontSize="16" Click="btnMedicos_Click"/>
+
+            <!-- Botón de Áreas Médicas -->
+            <Button x:Name="btnAreasMedicas" Content="Areas Médicas" Width="180" Height="50" Margin="10" 
+                Background="#FF52A8B9" Foreground="Black" BorderBrush="#FF8BD2E0" 
+                FontSize="16" Click="btnAreasMedicas_Click"/>
+
+            <!-- Botón de Tipos de Rayos X -->
+            <Button x:Name="btnRayosX" Content="Tipos de Rayos X" Width="180" Height="50" Margin="10" 
+                Background="#FFDA223B" Foreground="Black" BorderBrush="#FFFF0063" 
+                FontSize="16" Click="btnRayosX_Click"/>
+
+            <!-- Botón de Pacientes -->
+            <Button x:Name="btnPacientes" Content="Pacientes" Width="180" Height="50" Margin="10" 
+                Background="#FFF3A9A9" Foreground="White" BorderBrush="#FFD2AEAE" 
+                FontSize="16" Click="btnPacientes_Click"/>
+        </StackPanel>
+
+        <!-- DataGrid en la segunda fila -->
+        <DataGrid x:Name="dgRegistros" Grid.Row="1" AutoGenerateColumns="True" 
+              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+    </Grid>
+</Window>

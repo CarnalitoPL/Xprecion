@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,6 +45,14 @@ namespace Xprecion.Datos
                     txtID.Text = reader["Folio"].ToString();
                 }
                 reader.Close();
+            }
+        }
+        private void LimpiarFormulario()
+        {
+            foreach (var control in GridTipoDeRayos.Children)
+            {
+                if (control is TextBox textBox)
+                    textBox.Text = string.Empty;
             }
         }
         private void buscar()
@@ -88,12 +97,16 @@ namespace Xprecion.Datos
                 if (ds.Tables["Tabla"].Rows.Count > 0)
                 {
                     MessageBox.Show(c.EJECUTAR(G.modificar(),G.ID_TIPO_RAYOS_X1, G.PRECIOSERVICIO1, G.SERVICIO1));
+                    LimpiarFormulario();
+                    cargarfolio();
                 }
 
                 else
                 {
 
                     MessageBox.Show(c.EJECUTAR(G.grabar(), G.PRECIOSERVICIO1, G.SERVICIO1));
+                    LimpiarFormulario();
+                    cargarfolio();
                 }
 
             }
@@ -142,6 +155,8 @@ namespace Xprecion.Datos
                     if (ds.Tables["Tabla"].Rows.Count > 0)
                     {
                         MessageBox.Show(c.EJECUTAR(G.borrar(), B.ID_TIPO_RAYOS_X1), "BORRAR");
+                        LimpiarFormulario();
+                        cargarfolio();
                     }
 
                     else
@@ -162,6 +177,66 @@ namespace Xprecion.Datos
                 // El usuario seleccionó "No".
                 MessageBox.Show("Borrado de registro cancelado");
             }
+        }
+
+        private void MiInicio_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void txtPrecio_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            // Permitir solo números y un punto decimal
+            string newText = (sender as TextBox)?.Text + e.Text;
+
+            // Si el texto contiene un punto, asegurarse de que no haya más de uno
+            if (e.Text == "." && newText.Count(c => c == '.') > 1)
+            {
+                e.Handled = true; // No permitir más de un punto
+            }
+            else
+            {
+                // Validar que el texto tenga un formato adecuado: hasta 7 dígitos antes del punto y 2 después
+                e.Handled = !IsValidDecimalFormat(newText);
+            }
+        }
+
+        private void txtPrecio_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            // Permitir teclas de control como retroceso, suprimir, tabulación, flechas, etc.
+            if (e.Key == Key.Back || e.Key == Key.Delete || e.Key == Key.Tab || e.Key == Key.Left || e.Key == Key.Right)
+            {
+                e.Handled = false;
+            }
+        }
+
+        private void txtPrecio_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            if (!string.IsNullOrEmpty(textBox?.Text))
+            {
+                // Si el texto contiene un punto, separarlo en parte entera y decimal
+                string[] parts = textBox.Text.Split('.');
+
+                // Limitar los dígitos antes del punto a 7
+                if (parts.Length > 0 && parts[0].Length > 7)
+                {
+                    textBox.Text = parts[0].Substring(0, 7) + (parts.Length > 1 ? "." + parts[1] : "");
+                }
+
+                // Limitar los dígitos después del punto a 2
+                if (parts.Length > 1 && parts[1].Length > 2)
+                {
+                    textBox.Text = parts[0] + "." + parts[1].Substring(0, 2);
+                }
+            }
+        }
+
+        private bool IsValidDecimalFormat(string input)
+        {
+            // Validar formato: hasta 7 dígitos enteros y hasta 2 decimales
+            Regex regex = new Regex(@"^\d{1,7}(\.\d{0,2})?$");
+            return regex.IsMatch(input);
         }
     }
 }

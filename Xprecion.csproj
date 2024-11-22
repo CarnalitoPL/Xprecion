@@ -60,11 +60,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Datos\frmMedico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Datos\frmPacientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Datos\frmTipoDeRayosX.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Datos\SearchForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Datos\UltimosRegistros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,16 +90,28 @@
     </Compile>
     <Compile Include="Clases\ClAreaMedica.cs" />
     <Compile Include="Clases\ClGlobales.cs" />
+    <Compile Include="Clases\ClMedico.cs" />
+    <Compile Include="Clases\ClPacientes.cs" />
     <Compile Include="Clases\ClTipoDeRayosX.cs" />
+    <Compile Include="Clases\ClUltimosRecursos.cs" />
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Datos\Area_medica.xaml.cs">
       <DependentUpon>Area_medica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\frmMedico.xaml.cs">
+      <DependentUpon>frmMedico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\frmPacientes.xaml.cs">
+      <DependentUpon>frmPacientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Datos\frmTipoDeRayosX.xaml.cs">
       <DependentUpon>frmTipoDeRayosX.xaml</DependentUpon>
     </Compile>
     <Compile Include="Datos\SearchForm.xaml.cs">
       <DependentUpon>SearchForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\UltimosRegistros.xaml.cs">
+      <DependentUpon>UltimosRegistros.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -128,6 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Datos\basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

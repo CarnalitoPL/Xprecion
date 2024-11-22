@@ -1,0 +1,53 @@
+﻿<Window x:Class="Xprecion.Datos.frmMedico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Xprecion.Datos"
+        mc:Ignorable="d"
+        Title="frmMedico" Height="550" Width="800">
+    <Grid x:Name="GridMedico" Background="#F4F4F9">
+        <!-- Menú con fondo azul suave y bordes -->
+        <Menu VerticalAlignment="Top" Background="#5D9FEC" Height="70">
+            <MenuItem x:Name="MiInicio" Header="Inicio" Foreground="White" FontSize="18" Padding="15,10" Height="50" Click="MiInicio_Click"/>
+        </Menu>
+
+        <!-- Barra de herramientas con tres botones visibles -->
+        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top">
+            <Button x:Name="btngrabar" Height="40" Width="40" Click="btngrabar_Click" Margin="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/añadir fichero.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnBuscar" Height="40" Width="40" Click="btnBuscar_Click" Margin="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/buscar.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Height="40" Width="40" Click="Button_Click" Margin="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/basura.png"/>
+                </Button.Background>
+            </Button>
+        </ToolBar>
+
+        <!-- Contenedor StackPanel para organizar los elementos verticalmente -->
+        <StackPanel x:Name="jeje" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="40,150,40,0">
+            <!-- Etiquetas con colores suaves y tamaños ajustados -->
+            <Label Content="ID del Médico" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <TextBox x:Name="txtID" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+
+            <Label Content="Nombre" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+
+            <Label Content="Apellido Paterno" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <TextBox x:Name="txtIDApellidoPa" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+
+            <Label Content="Apellido Materno" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <TextBox x:Name="txtApellidoMA" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+
+            <Label Content="Área" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <ComboBox x:Name="CBArea" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

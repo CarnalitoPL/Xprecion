@@ -13,7 +13,7 @@ namespace Xprecion.Clases
     internal class Conexion
     {
         public string miconexion;
-        private string sentencia1;
+        public string sentencia1;
 
         // estas se derivan de la clase System.Data.SqlClient
         private SqlConnection conn;

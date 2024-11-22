@@ -14,24 +14,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Xprecion.Clases;
-using static Xprecion.Clases.ClGlobales;
+using static System.Windows.Forms.MonthCalendar;
 
 namespace Xprecion.Datos
 {
     /// <summary>
-    /// Lógica de interacción para Area_medica.xaml
+    /// Lógica de interacción para frmMedico.xaml
     /// </summary>
-    public partial class Area_medica : Window
+    public partial class frmMedico : Window
     {
-        public Area_medica()
+        public frmMedico()
         {
             InitializeComponent();
+            cargarregion();
             cargarfolio();
         }
-        Clases.ClAreaMedica G;
+        Clases.Conexion c;
+        Clases.ClMedico G;
         public void cargarfolio()
         {
-            string query = "SELECT MAX(ID_AREA)+1 AS FOLIO FROM AREA_MEDICO;";
+            string query = "SELECT MAX(ID_MEDICO)+1 AS FOLIO FROM MEDICO;";
             using (SqlConnection conn = new SqlConnection(ClGlobales.Globales.miconexion))
             {
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -46,21 +48,37 @@ namespace Xprecion.Datos
                 reader.Close();
             }
         }
+        private void cargarregion()
+        {
+            DataSet ds = new DataSet();
+            Clases.ClAreaMedica s = new Clases.ClAreaMedica();
+            c = new Clases.Conexion(s.buscartodos());
+            ds = c.consultar();
+            //
+            CBArea.ItemsSource = ds.Tables[0].DefaultView;
+            //
+            CBArea.DisplayMemberPath = ds.Tables[0].Columns["AREA"].ToString();
+            //
+            CBArea.SelectedValuePath = ds.Tables[0].Columns["ID_AREA"].ToString();
+
+        }
         private void LimpiarFormulario()
         {
-            foreach (var control in GridAreaMedica.Children)
+            foreach (var control in jeje.Children)
             {
                 if (control is TextBox textBox)
                     textBox.Text = string.Empty;
+                else if (control is ComboBox comboBox)
+                    comboBox.SelectedIndex = -1;
             }
         }
         private void buscar()
         {
-            string query = "SELECT * FROM AREA_MEDICO WHERE ID_AREA = @ID_AREA";
+            string query = "SELECT * FROM vta_medico_areamedico WHERE ID_MEDICO = @ID_MEDICO";
             using (SqlConnection conn = new SqlConnection(ClGlobales.Globales.miconexion))
             {
                 SqlCommand cmd = new SqlCommand(query, conn); //pa hacer crud
-                cmd.Parameters.AddWithValue("@ID_AREA", txtID.Text);
+                cmd.Parameters.AddWithValue("@ID_MEDICO", txtID.Text);
 
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -69,8 +87,11 @@ namespace Xprecion.Datos
                     if (reader.Read())
                     {
                         // Asignar valores a las propiedades de la clase
-                        txtID.Text = reader["ID_AREA"].ToString();
-                        txtArea.Text = reader["AREA"].ToString();
+                        txtID.Text = reader["ID_MEDICO"].ToString();
+                        txtNombre.Text = reader["NOMBRE"].ToString();
+                        txtIDApellidoPa.Text = reader["APELLIDO_PA"].ToString();
+                        txtApellidoMA.Text = reader["APELLIDO_MA"].ToString();
+                        CBArea.Text = reader["AREA"].ToString();
                     }
                     else MessageBox.Show("No existe el area");
                     reader.Close();
@@ -86,15 +107,16 @@ namespace Xprecion.Datos
         {
             try
             {
-                Clases.ClAreaMedica B = new Clases.ClAreaMedica(byte.Parse(txtID.Text));
+                int idarea = int.Parse(CBArea.SelectedValue.ToString());
+                Clases.ClMedico B = new Clases.ClMedico(byte.Parse(txtID.Text));
                 DataSet ds = new DataSet();
                 Clases.Conexion c = new Clases.Conexion(B.consultar());
                 ds = c.consultar();
-                G = new Clases.ClAreaMedica(byte.Parse(txtID.Text), txtArea.Text);
+                G = new Clases.ClMedico(byte.Parse(txtID.Text), txtNombre.Text, txtIDApellidoPa.Text, txtApellidoMA.Text,idarea);
                 c = new Clases.Conexion();
                 if (ds.Tables["Tabla"].Rows.Count > 0)
                 {
-                    MessageBox.Show(c.EJECUTAR(G.modificar(), G.ID_AREA1, G.AREA1));
+                    MessageBox.Show(c.EJECUTAR(G.modificar(), G.ID_MEDICO1, G.NOMBRE1, G.APELLIDO_PA1, G.APELLIDO_MA1, G.ID_AREA1));
                     LimpiarFormulario();
                     cargarfolio();
                 }
@@ -102,7 +124,7 @@ namespace Xprecion.Datos
                 else
                 {
 
-                    MessageBox.Show(c.EJECUTAR(G.grabar(), G.AREA1));
+                    MessageBox.Show(c.EJECUTAR(G.grabar(), G.ID_MEDICO1, G.NOMBRE1, G.APELLIDO_PA1, G.APELLIDO_MA1, G.ID_AREA1));
                     LimpiarFormulario();
                     cargarfolio();
                 }
@@ -115,7 +137,7 @@ namespace Xprecion.Datos
         }
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            Clases.ClAreaMedica categ = new Clases.ClAreaMedica();
+            Clases.ClMedico categ = new Clases.ClMedico();
             Clases.Conexion con = new Clases.Conexion();
             if (con.Execute(categ.buscartodos(), 0) == true)
             {
@@ -124,13 +146,6 @@ namespace Xprecion.Datos
                     txtID.Text = con.FieldValue;
                     buscar();
                 }
-            }
-        }
-
-        private void btngrabar_Click(object sender, RoutedEventArgs e)
-        {
-            {
-                graba();
             }
         }
 
@@ -144,15 +159,15 @@ namespace Xprecion.Datos
             {
                 try
                 {
-                    Clases.ClAreaMedica B = new Clases.ClAreaMedica(byte.Parse(txtID.Text));
+                    Clases.ClMedico B = new Clases.ClMedico(byte.Parse(txtID.Text));
                     DataSet ds = new DataSet();
                     Clases.Conexion c = new Clases.Conexion(B.consultar());
                     ds = c.consultar();
-                    G = new Clases.ClAreaMedica(byte.Parse(txtID.Text));
+                    G = new Clases.ClMedico(byte.Parse(txtID.Text));
                     c = new Clases.Conexion();
                     if (ds.Tables["Tabla"].Rows.Count > 0)
                     {
-                        MessageBox.Show(c.EJECUTAR(G.borrar(), B.ID_AREA1), "BORRAR");
+                        MessageBox.Show(c.EJECUTAR(G.borrar(), B.ID_MEDICO1), "BORRAR");
                         LimpiarFormulario();
                         cargarfolio();
                     }
@@ -174,6 +189,13 @@ namespace Xprecion.Datos
             {
                 // El usuario seleccionó "No".
                 MessageBox.Show("Borrado de registro cancelado");
+            }
+        }
+
+        private void btngrabar_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                graba();
             }
         }
 
