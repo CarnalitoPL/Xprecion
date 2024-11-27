@@ -117,9 +117,8 @@ namespace Xprecion.Datos
         }
         private void btngrabar_Click(object sender, RoutedEventArgs e)
         {
-            {
-                graba();
-            }
+            LimpiarFormulario();
+            cargarfolio();
         }
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
@@ -237,6 +236,13 @@ namespace Xprecion.Datos
             // Validar formato: hasta 7 dígitos enteros y hasta 2 decimales
             Regex regex = new Regex(@"^\d{1,7}(\.\d{0,2})?$");
             return regex.IsMatch(input);
+        }
+
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                graba();
+            }
         }
     }
 }

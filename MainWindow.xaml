@@ -20,7 +20,7 @@
             </MenuItem>
             <MenuItem Header="Agendar una cita" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
             <MenuItem Header="Citas Activas" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
-            <MenuItem x:Name="Registros" Header="Últimos Registros" Click="Registros_Click" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
+            <MenuItem x:Name="Registros" Header="Reportes" Click="Registros_Click" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
         </Menu>
 
         <!-- Contenedor de los widgets dinámicos con márgenes ajustados -->

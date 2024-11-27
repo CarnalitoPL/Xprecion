@@ -13,10 +13,16 @@
         </Menu>
 
         <!-- Barra de herramientas con tres botones visibles -->
-        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top">
+        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top" Width="220">
             <Button x:Name="btngrabar" Height="40" Width="40" Click="btngrabar_Click" Margin="5">
                 <Button.Background>
                     <ImageBrush ImageSource="/Datos/añadir fichero.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnGuardar" Height="40" Width="40
+                    " Click="btnGuardar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/Guardar.png"/>
                 </Button.Background>
             </Button>
             <Button x:Name="btnBuscar" Height="40" Width="40" Click="btnBuscar_Click" Margin="5">
@@ -26,7 +32,7 @@
             </Button>
             <Button Height="40" Width="40" Click="Button_Click" Margin="5">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Datos/basura.png"/>
+                    <ImageBrush ImageSource="/Datos/Borar2.png"/>
                 </Button.Background>
             </Button>
         </ToolBar>
@@ -34,19 +40,19 @@
         <!-- Contenedor StackPanel para organizar los elementos verticalmente -->
         <StackPanel x:Name="jeje" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="40,150,40,0">
             <!-- Etiquetas con colores suaves y tamaños ajustados -->
-            <Label Content="ID del Médico" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <Label Content="ID del Médico" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
             <TextBox x:Name="txtID" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
 
-            <Label Content="Nombre" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <Label Content="Nombre" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
             <TextBox x:Name="txtNombre" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
 
-            <Label Content="Apellido Paterno" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <Label Content="Apellido Paterno" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
             <TextBox x:Name="txtIDApellidoPa" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
 
-            <Label Content="Apellido Materno" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <Label Content="Apellido Materno" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
             <TextBox x:Name="txtApellidoMA" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
 
-            <Label Content="Área" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+            <Label Content="Área" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
             <ComboBox x:Name="CBArea" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
         </StackPanel>
     </Grid>

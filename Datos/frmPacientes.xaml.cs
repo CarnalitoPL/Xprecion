@@ -138,9 +138,8 @@ namespace Xprecion.Datos
         }
         private void btngrabar_Click(object sender, RoutedEventArgs e)
         {
-            {
-                graba();
-            }
+            LimpiarFormulario();
+            cargarfolio();
         }
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
@@ -210,5 +209,11 @@ namespace Xprecion.Datos
             e.Handled = !Regex.IsMatch(e.Text, "^[0-9]+$");
         }
 
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            {
+                graba();
+            }
+        }
     }
 }

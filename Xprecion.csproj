@@ -156,5 +156,11 @@
   <ItemGroup>
     <Resource Include="logo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Datos\Borar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Datos\Guardar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

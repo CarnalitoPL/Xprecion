@@ -129,9 +129,8 @@ namespace Xprecion.Datos
 
         private void btngrabar_Click(object sender, RoutedEventArgs e)
         {
-            {
-                graba();
-            }
+            LimpiarFormulario();
+            cargarfolio();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -180,6 +179,13 @@ namespace Xprecion.Datos
         private void MiInicio_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            {
+                graba();
+            }
         }
     }
 }

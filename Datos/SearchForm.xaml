@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Xprecion.Datos"
         mc:Ignorable="d"
         Title="SearchForm" Height="450" Width="800">
-    <Grid x:Name="gridformulario" Loaded="gridformulario_Loaded" Background="#FFAFE8D4">
+    <Grid x:Name="gridformulario" Loaded="gridformulario_Loaded" Background="#FF5D9FEC">
         <!-- Título -->
         <TextBlock Text="Formulario de Búsqueda" 
                HorizontalAlignment="Center" 
@@ -14,7 +14,7 @@
                Margin="0,10,0,0" 
                FontSize="20" 
                FontWeight="Bold" 
-               Foreground="DarkSlateGray"/>
+               Foreground="Black"/>
 
         <!-- Dato a Buscar -->
         <Label Content="Dato a buscar:" 
@@ -95,26 +95,26 @@
                 Content="Aceptar" 
                 Width="100" 
                 Height="35" 
-                Background="#FF4DC821" 
+                Background="#FF1D3DA0" 
                 Foreground="White" 
                 FontWeight="Bold" 
-                Click="Button_Click"/>
+                Click="Button_Click" BorderBrush="Black"/>
             <Button x:Name="btnlimpiar" 
                 Content="Limpiar" 
                 Width="100" 
                 Height="35" 
-                Background="#FFE0D663" 
-                Foreground="Black" 
+                Background="#FF1D3DA0" 
+                Foreground="White" 
                 FontWeight="Bold" 
-                Click="btnlimpiar_Click"/>
+                Click="btnlimpiar_Click" BorderBrush="Black"/>
             <Button x:Name="btncancelar" 
                 Content="Cancelar" 
                 Width="100" 
                 Height="35" 
-                Background="#FFDC3028" 
+                Background="#FF1D3DA0" 
                 Foreground="White" 
                 FontWeight="Bold" 
-                Click="btncancelar_Click"/>
+                Click="btncancelar_Click" BorderBrush="Black"/>
         </StackPanel>
     </Grid>
 </Window>

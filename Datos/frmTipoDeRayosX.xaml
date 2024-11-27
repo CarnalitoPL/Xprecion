@@ -13,10 +13,15 @@
         </Menu>
 
         <!-- Barra de herramientas con tres botones visibles -->
-        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top">
+        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top" Width="217">
             <Button x:Name="btngrabar" Height="40" Width="40" Click="btngrabar_Click" Margin="5">
                 <Button.Background>
                     <ImageBrush ImageSource="/Datos/añadir fichero.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnGuardar" Height="40" Width="40" Click="btnGuardar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/Guardar.png"/>
                 </Button.Background>
             </Button>
             <Button x:Name="btnBuscar" Height="40" Width="40" Click="btnBuscar_Click" Margin="5">
@@ -26,19 +31,19 @@
             </Button>
             <Button Height="40" Width="40" Click="Button_Click" Margin="5">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Datos/basura.png"/>
+                    <ImageBrush ImageSource="/Datos/Borar2.png"/>
                 </Button.Background>
             </Button>
         </ToolBar>
 
         <!-- Etiquetas de los campos con un color más suave para que no sobrecargue -->
-        <Label Content="ID" HorizontalAlignment="Left" Margin="81,173,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
-        <Label Content="Tipo de rayos X" HorizontalAlignment="Left" Margin="81,318,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
-        <Label Content="Precio" HorizontalAlignment="Left" Margin="81,251,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#7F8C8D"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="81,173,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <Label Content="Tipo de rayos X" HorizontalAlignment="Left" Margin="81,318,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Margin="81,251,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
 
         <!-- Campos de texto con bordes redondeados y ajustables -->
         <TextBox x:Name="txtID" HorizontalAlignment="Stretch" Margin="232,177,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
         <TextBox x:Name="txtRayosX" HorizontalAlignment="Stretch" Margin="232,316,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
-        <TextBox x:Name="txtPrecio" HorizontalAlignment="Stretch" Margin="232,249,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" PreviewTextInput="txtPrecio_PreviewTextInput" PreviewKeyDown="txtPrecio_PreviewKeyDown" TextChanged="txtPrecio_TextChanged"/>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Stretch" Margin="232,249,20,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" PreviewTextInput="txtPrecio_PreviewTextInput" PreviewKeyDown="txtPrecio_PreviewKeyDown" TextChanged="txtPrecio_TextChanged" Background="{x:Null}"  />
     </Grid>
 </Window>

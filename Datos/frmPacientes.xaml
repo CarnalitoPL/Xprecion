@@ -13,10 +13,15 @@
         </Menu>
 
         <!-- Barra de herramientas con tres botones visibles -->
-        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top">
+        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top" Width="219">
             <Button x:Name="btngrabar" Height="40" Width="40" Click="btngrabar_Click" Margin="5">
                 <Button.Background>
                     <ImageBrush ImageSource="/Datos/añadir fichero.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnGuardar" Height="40" Width="40" Click="btnGuardar_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/Guardar.png"/>
                 </Button.Background>
             </Button>
             <Button x:Name="btnBuscar" Height="40" Width="40" Click="btnBuscar_Click" Margin="5">
@@ -26,7 +31,7 @@
             </Button>
             <Button Height="40" Width="40" Click="Button_Click" Margin="5">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Datos/basura.png"/>
+                    <ImageBrush ImageSource="/Datos/Borar2.png"/>
                 </Button.Background>
             </Button>
         </ToolBar>
