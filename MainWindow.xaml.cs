@@ -60,5 +60,12 @@ namespace Xprecion
             x.Owner = this;
             x.Show();
         }
+
+        private void miAgendarCita_Click(object sender, RoutedEventArgs e)
+        {
+            Datos.AgendarCita x = new Datos.AgendarCita();
+            x.Owner = this;
+            x.Show();
+        }
     }
 }

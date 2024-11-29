@@ -49,6 +49,10 @@ namespace Xprecion.Clases
         {
             return ("select * from vta_medico_areamedico");
         }
+        public string buscarMedico()
+        {
+            return ("select * from MEDICO");
+        }
         public string grabar()
         {
             return ("sp_grabar_MEDICO");

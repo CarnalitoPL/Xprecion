@@ -56,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Datos\AgendarCita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Datos\Area_medica.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -95,6 +99,9 @@
     <Compile Include="Clases\ClTipoDeRayosX.cs" />
     <Compile Include="Clases\ClUltimosRecursos.cs" />
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Datos\AgendarCita.xaml.cs">
+      <DependentUpon>AgendarCita.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Datos\Area_medica.xaml.cs">
       <DependentUpon>Area_medica.xaml</DependentUpon>
     </Compile>

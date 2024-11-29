@@ -1,0 +1,63 @@
+﻿<Window x:Class="Xprecion.Datos.AgendarCita"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Xprecion.Datos"
+        mc:Ignorable="d"
+        Title="AgendarCita" Height="800" Width="800">
+    <Grid x:Name="GridAreaMedica" Background="#F4F4F9">
+        <!-- Menú con fondo azul suave y bordes -->
+        <Menu VerticalAlignment="Top" Background="#5D9FEC" Height="70">
+            <MenuItem x:Name="MiInicio" Header="Inicio" Foreground="White" FontSize="18" Padding="15,10" Height="50" Click="MiInicio_Click"/>
+        </Menu>
+
+        <!-- Barra de herramientas con tres botones visibles y colores suaves -->
+        <ToolBar HorizontalAlignment="Left" Height="60" Margin="0,70,0,0" VerticalAlignment="Top" Width="235">
+            <Button x:Name="btngrabar" Height="40" Width="40" Click="btngrabar_Click" Margin="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/añadir fichero.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnGuardar" Height="42" Width="37" Click="Button_Click_1">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/Guardar.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btnBuscar" Height="40" Width="40" Click="btnBuscar_Click" Margin="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/buscar.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Height="40" Width="40" Click="Button_Click" Margin="5">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Datos/Borar2.png"/>
+                </Button.Background>
+            </Button>
+        </ToolBar>
+
+        <!-- Etiquetas de los campos con color suave para no saturar -->
+        <Label Content="ID del cita&#xD;&#xA;" HorizontalAlignment="Left" Margin="81,173,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <Label Content="Fecha&#xD;&#xA;" HorizontalAlignment="Left" Margin="81,240,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+
+        <!-- Campos de texto con bordes redondeados y ajustables -->
+        <TextBox x:Name="txtID" Margin="232,177,448,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+        <DatePicker x:Name="DPFecha" HorizontalAlignment="Left" Margin="232,240,0,0" VerticalAlignment="Top" Height="24" Width="150" RenderTransformOrigin="0.334,-0.213"/>
+        <Label Content="Estado de Cita&#xA;" HorizontalAlignment="Left" Margin="81,281,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <CheckBox x:Name="ComboBEstado" Content="" HorizontalAlignment="Left" Margin="236,292,0,0" VerticalAlignment="Top" Height="15" Width="71"/>
+        <Label Content="Comentario" HorizontalAlignment="Left" Margin="81,320,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <TextBox x:Name="txtComentario" MaxLength="200" Margin="232,324,295,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="76" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" UndoLimit="2" KeyDown="txtComentario_KeyDown"/>
+        <Label Content="Tipo de rayos x" HorizontalAlignment="Left" Margin="74,429,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <ComboBox x:Name="CBTipoDeRayos" HorizontalAlignment="Left" Margin="240,429,0,0" VerticalAlignment="Top" Width="136" Height="28" BorderBrush="White"/>
+        <Label Content="ID Paciente" HorizontalAlignment="Left" Margin="82,565,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <TextBox x:Name="txtIDPaciente" Margin="240,565,440,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
+        <Label Content="Nombre Paciente" HorizontalAlignment="Left" Margin="82,614,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <TextBox x:Name="txtNombrePaciente" Margin="240,614,440,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
+        <Button x:Name="btnBuscarCliente" Content="Buscar" HorizontalAlignment="Left" Margin="395,614,0,0" VerticalAlignment="Top" Height="33" Width="47" Click="btnBuscarCliente_Click"/>
+        <Label Content="ID Medico" HorizontalAlignment="Left" Margin="82,470,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <TextBox x:Name="txtIDMedico" Margin="240,470,440,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
+        <Label Content="Nombre del Medico" HorizontalAlignment="Left" Margin="75,518,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <TextBox x:Name="txtNombreMedico" Margin="240,519,440,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
+        <Button x:Name="btnBuscarMedico" Content="Buscar" HorizontalAlignment="Left" Margin="395,519,0,0" VerticalAlignment="Top" Height="33" Width="47" RenderTransformOrigin="0.362,0.456" Click="btnBuscarMedico_Click"/> 
+    </Grid>
+</Window>

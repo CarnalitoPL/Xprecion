@@ -194,7 +194,7 @@ namespace Xprecion.Datos
             }
             else
             {
-                // Validar que el texto tenga un formato adecuado: hasta 7 dígitos antes del punto y 2 después
+                // Validar que el texto tenga un formato adecuado: hasta 5 dígitos antes del punto y 2 después
                 e.Handled = !IsValidDecimalFormat(newText);
             }
         }
@@ -218,9 +218,9 @@ namespace Xprecion.Datos
                 string[] parts = textBox.Text.Split('.');
 
                 // Limitar los dígitos antes del punto a 7
-                if (parts.Length > 0 && parts[0].Length > 7)
+                if (parts.Length > 0 && parts[0].Length > 5)
                 {
-                    textBox.Text = parts[0].Substring(0, 7) + (parts.Length > 1 ? "." + parts[1] : "");
+                    textBox.Text = parts[0].Substring(0, 5) + (parts.Length > 1 ? "." + parts[1] : "");
                 }
 
                 // Limitar los dígitos después del punto a 2

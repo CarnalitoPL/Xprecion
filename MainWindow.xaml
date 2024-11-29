@@ -18,7 +18,7 @@
                 <MenuItem x:Name="MIMedico" Header="Médico" Click="MIMedico_Click" Foreground="Black" FontSize="16" Padding="10,8"/>
                 <MenuItem x:Name="MIPacientes" Header="Añadir paciente" Foreground="Black" FontSize="16" Padding="10,8" Click="MIPacientes_Click"/>
             </MenuItem>
-            <MenuItem Header="Agendar una cita" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
+            <MenuItem x:Name="miAgendarCita" Header="Agendar una cita" Foreground="White" FontSize="18" Padding="15,10" Height="50" Click="miAgendarCita_Click"/>
             <MenuItem Header="Citas Activas" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
             <MenuItem x:Name="Registros" Header="Reportes" Click="Registros_Click" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
         </Menu>
@@ -33,7 +33,7 @@
                 <Border BorderBrush="#3498db" BorderThickness="2" CornerRadius="10" Padding="20" Background="White"
                     HorizontalAlignment="Stretch" VerticalAlignment="Top">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock Text="Bienvenido a XPRECION" FontSize="40" FontWeight="Bold" Foreground="#3498db" TextAlignment="Center"/>
+                        <TextBlock Text="Bienvenido a XPRECISION" FontSize="40" FontWeight="Bold" Foreground="#3498db" TextAlignment="Center"/>
                         <TextBlock Text="Centro Médico especializado en brindar servicios de salud de alta calidad." TextAlignment="Center" Foreground="#7F8C8D" FontSize="20"/>
                         <Image Source="/logo.jpg" Margin="10" HorizontalAlignment="Center"/>
                     </StackPanel>

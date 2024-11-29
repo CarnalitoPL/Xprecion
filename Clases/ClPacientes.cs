@@ -60,6 +60,10 @@ namespace Xprecion.Clases
         {
             return ("select * from REGISTRO_DE_PACIENTE");
         }
+        public string buscarPaciente()
+        {
+            return ("select * from REGISTRO_DE_PACIENTE");
+        }
         public string grabar()
         {
             return ("sp_grabar_Paciente");
