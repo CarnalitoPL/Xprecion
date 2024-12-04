@@ -38,7 +38,7 @@
 
         <!-- Etiquetas de los campos con color suave para no saturar -->
         <Label Content="ID del cita&#xD;&#xA;" HorizontalAlignment="Left" Margin="81,173,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
-        <Label Content="Fecha&#xD;&#xA;" HorizontalAlignment="Left" Margin="81,240,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="87,237,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
 
         <!-- Campos de texto con bordes redondeados y ajustables -->
         <TextBox x:Name="txtID" Margin="232,177,448,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
@@ -58,6 +58,8 @@
         <TextBox x:Name="txtIDMedico" Margin="240,470,440,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
         <Label Content="Nombre del Medico" HorizontalAlignment="Left" Margin="75,518,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
         <TextBox x:Name="txtNombreMedico" Margin="240,519,440,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
-        <Button x:Name="btnBuscarMedico" Content="Buscar" HorizontalAlignment="Left" Margin="395,519,0,0" VerticalAlignment="Top" Height="33" Width="47" RenderTransformOrigin="0.362,0.456" Click="btnBuscarMedico_Click"/> 
+        <Button x:Name="btnBuscarMedico" Content="Buscar" HorizontalAlignment="Left" Margin="395,519,0,0" VerticalAlignment="Top" Height="33" Width="47" RenderTransformOrigin="0.362,0.456" Click="btnBuscarMedico_Click"/>
+        <ComboBox x:Name="CBHora" HorizontalAlignment="Left" Margin="498,237,0,0" VerticalAlignment="Top" Width="136" Height="28" BorderBrush="White"/>
+        <Label Content="Hora" HorizontalAlignment="Left" Margin="418,237,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
     </Grid>
 </Window>

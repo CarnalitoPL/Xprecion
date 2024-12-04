@@ -93,6 +93,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Clases\ClAreaMedica.cs" />
+    <Compile Include="Clases\ClCitas.cs" />
     <Compile Include="Clases\ClGlobales.cs" />
     <Compile Include="Clases\ClMedico.cs" />
     <Compile Include="Clases\ClPacientes.cs" />
