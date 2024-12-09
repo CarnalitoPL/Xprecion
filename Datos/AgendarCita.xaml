@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Xprecion.Datos"
         mc:Ignorable="d"
         Title="AgendarCita" Height="800" Width="800">
-    <Grid x:Name="GridAreaMedica" Background="#F4F4F9">
+    <Grid x:Name="GridAgendarCita" Background="#F4F4F9">
         <!-- Menú con fondo azul suave y bordes -->
         <Menu VerticalAlignment="Top" Background="#5D9FEC" Height="70">
             <MenuItem x:Name="MiInicio" Header="Inicio" Foreground="White" FontSize="18" Padding="15,10" Height="50" Click="MiInicio_Click"/>
@@ -41,7 +41,7 @@
         <Label Content="Fecha" HorizontalAlignment="Left" Margin="87,237,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
 
         <!-- Campos de texto con bordes redondeados y ajustables -->
-        <TextBox x:Name="txtID" Margin="232,177,448,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+        <TextBox x:Name="txtID" Margin="232,177,448,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
         <DatePicker x:Name="DPFecha" HorizontalAlignment="Left" Margin="232,240,0,0" VerticalAlignment="Top" Height="24" Width="150" RenderTransformOrigin="0.334,-0.213"/>
         <Label Content="Estado de Cita&#xA;" HorizontalAlignment="Left" Margin="81,281,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
         <CheckBox x:Name="ComboBEstado" Content="" HorizontalAlignment="Left" Margin="236,292,0,0" VerticalAlignment="Top" Height="15" Width="71"/>
@@ -59,7 +59,15 @@
         <Label Content="Nombre del Medico" HorizontalAlignment="Left" Margin="75,518,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
         <TextBox x:Name="txtNombreMedico" Margin="240,519,440,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
         <Button x:Name="btnBuscarMedico" Content="Buscar" HorizontalAlignment="Left" Margin="395,519,0,0" VerticalAlignment="Top" Height="33" Width="47" RenderTransformOrigin="0.362,0.456" Click="btnBuscarMedico_Click"/>
-        <ComboBox x:Name="CBHora" HorizontalAlignment="Left" Margin="498,237,0,0" VerticalAlignment="Top" Width="136" Height="28" BorderBrush="White"/>
+        <ComboBox x:Name="CBHora" HorizontalAlignment="Left" Margin="498,237,0,0" VerticalAlignment="Top" Width="136" Height="28" BorderBrush="White">
+            <ComboBoxItem Content="08:30 AM"/>
+            <ComboBoxItem Content="10:00 AM"/>
+            <ComboBoxItem Content="11:30 AM"/>
+            <ComboBoxItem Content="01:00 PM"/>
+            <ComboBoxItem Content="02:30 PM"/>
+            <ComboBoxItem Content="04:00 PM"/>
+            <ComboBoxItem Content="05:30 PM"/>
+        </ComboBox>
         <Label Content="Hora" HorizontalAlignment="Left" Margin="418,237,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
     </Grid>
 </Window>

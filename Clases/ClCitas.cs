@@ -55,7 +55,7 @@ namespace Xprecion.Clases
 
         public string grabar()
         {
-            return ("sp_grabar_cita");
+            return ("sp_grabar_citas");
         }
         public string consultar()
         {
@@ -63,7 +63,7 @@ namespace Xprecion.Clases
         }
         public string modificar()
         {
-            return ("sp_modificar_cita");
+            return ("sp_modificar_citas");
         }
         public string borrar()
         {
