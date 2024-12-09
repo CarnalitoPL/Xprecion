@@ -1,0 +1,30 @@
+﻿<Window x:Class="Xprecion.Datos.UltimasCitas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Xprecion.Datos"
+        mc:Ignorable="d"
+        Title="UltimasCitas" Height="450" Width="800">
+    <Grid Background="#FF51B0EF">
+        <!-- Definimos filas con tamaños relativos -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Para los botones -->
+            <RowDefinition Height="*"/>
+            <!-- Para el DataGrid -->
+        </Grid.RowDefinitions>
+
+        <!-- Los botones en la primera fila -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <!-- Botón de Áreas Médicas -->
+            <Button x:Name="btnCitas" Content="Citas" Width="453" Height="50" Margin="10" 
+                Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
+                FontSize="16" Click="btnCitas_Click" />
+        </StackPanel>
+
+        <!-- DataGrid en la segunda fila -->
+        <DataGrid x:Name="dgRegistros" Grid.Row="1" AutoGenerateColumns="True" 
+              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+    </Grid>
+</Window>

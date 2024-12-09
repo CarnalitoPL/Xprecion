@@ -80,6 +80,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Datos\UltimasCitas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Datos\UltimosRegistros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -117,6 +121,9 @@
     </Compile>
     <Compile Include="Datos\SearchForm.xaml.cs">
       <DependentUpon>SearchForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\UltimasCitas.xaml.cs">
+      <DependentUpon>UltimasCitas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Datos\UltimosRegistros.xaml.cs">
       <DependentUpon>UltimosRegistros.xaml</DependentUpon>

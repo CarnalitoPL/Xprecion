@@ -67,5 +67,12 @@ namespace Xprecion
             x.Owner = this;
             x.Show();
         }
+
+        private void Citas_Activas_Click(object sender, RoutedEventArgs e)
+        {
+            Datos.UltimasCitas x = new Datos.UltimasCitas();
+            x.Owner = this;
+            x.Show();
+        }
     }
 }
