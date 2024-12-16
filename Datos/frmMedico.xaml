@@ -41,7 +41,7 @@
         <StackPanel x:Name="jeje" VerticalAlignment="Top" HorizontalAlignment="Stretch" Margin="40,150,40,0">
             <!-- Etiquetas con colores suaves y tamaños ajustados -->
             <Label Content="ID del Médico" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
-            <TextBox x:Name="txtID" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>
+            <TextBox x:Name="txtID" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
 
             <Label Content="Nombre" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
             <TextBox x:Name="txtNombre" HorizontalAlignment="Stretch" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5"/>

@@ -55,7 +55,7 @@
 
             <!-- Etiquetas y controles -->
             <Label Content="ID del Paciente" FontSize="16" FontWeight="Bold" Foreground="#3498db" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
-            <TextBox x:Name="txtID" FontSize="14" BorderBrush="#3498db" BorderThickness="2" Padding="5" Grid.Row="0" Grid.Column="1" Height="35" Margin="10"/>
+            <TextBox x:Name="txtID" FontSize="14" BorderBrush="#3498db" BorderThickness="2" Padding="5" Grid.Row="0" Grid.Column="1" Height="35" Margin="10" IsEnabled="False"/>
 
             <Label Content="Nombre" FontSize="16" FontWeight="Bold" Foreground="#3498db" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
             <TextBox x:Name="txtNombre" FontSize="14" BorderBrush="#3498db" BorderThickness="2" Padding="5" Grid.Row="1" Grid.Column="1" Height="35" Margin="10"/>

@@ -40,7 +40,7 @@
             FontSize="16" Click="btnPacientes_Click"/>
 
             <Button x:Name="btnimprimir" Content="Imprimir" Width="180" Height="50" Margin="10" 
-            Background="#FF6889EF" Foreground="White" BorderBrush="Black" 
+            Background="Black" Foreground="White" BorderBrush="Black" 
             FontSize="16" Click="btnimprimir_Click"/>
         </StackPanel>
 
