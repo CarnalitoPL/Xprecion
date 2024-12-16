@@ -19,6 +19,7 @@
                 <MenuItem x:Name="MIPacientes" Header="Añadir paciente" Foreground="Black" FontSize="16" Padding="10,8" Click="MIPacientes_Click"/>
             </MenuItem>
             <MenuItem x:Name="miAgendarCita" Header="Agendar una cita" Foreground="White" FontSize="18" Padding="15,10" Height="50" Click="miAgendarCita_Click"/>
+            <MenuItem x:Name="miResultado" Header="Resultado Cita" Foreground="White" FontSize="18" Padding="15,10" Height="50" Click="miResultado_Click" />
             <MenuItem x:Name="Citas_Activas" Header="Citas Activas" Foreground="White" FontSize="18" Padding="15,10" Height="50" Click="Citas_Activas_Click"/>
             <MenuItem x:Name="Registros" Header="Reportes" Click="Registros_Click" Foreground="White" FontSize="18" Padding="15,10" Height="50"/>
         </Menu>

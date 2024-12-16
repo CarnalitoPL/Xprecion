@@ -135,7 +135,7 @@ namespace Xprecion.Datos
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+       /* private void Button_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Desea borrar el registro?", "Borrar", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
@@ -176,7 +176,7 @@ namespace Xprecion.Datos
                 // El usuario seleccionó "No".
                 MessageBox.Show("Borrado de registro cancelado");
             }
-        }
+        }*/
 
         private void MiInicio_Click(object sender, RoutedEventArgs e)
         {

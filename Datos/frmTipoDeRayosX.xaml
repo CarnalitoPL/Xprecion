@@ -29,11 +29,13 @@
                     <ImageBrush ImageSource="/Datos/buscar.jpg"/>
                 </Button.Background>
             </Button>
+            <!--
             <Button Height="40" Width="40" Click="Button_Click" Margin="5">
                 <Button.Background>
                     <ImageBrush ImageSource="/Datos/Borar2.png"/>
                 </Button.Background>
             </Button>
+            -->
         </ToolBar>
 
         <!-- Etiquetas de los campos con un color más suave para que no sobrecargue -->

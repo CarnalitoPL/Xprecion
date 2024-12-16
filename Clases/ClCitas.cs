@@ -52,7 +52,10 @@ namespace Xprecion.Clases
         {
             return ("select * from vta_citas");
         }
-
+        public string buscarcita()
+        {
+            return ("select * from vta_buscarcita");
+        }
         public string grabar()
         {
             return ("sp_grabar_citas");

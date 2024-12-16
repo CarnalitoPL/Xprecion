@@ -74,5 +74,12 @@ namespace Xprecion
             x.Owner = this;
             x.Show();
         }
+
+        private void miResultado_Click(object sender, RoutedEventArgs e)
+        {
+            Datos.frmResultadoCitas x = new Datos.frmResultadoCitas();
+            x.Owner = this;
+            x.Show();
+        }
     }
 }

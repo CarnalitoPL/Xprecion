@@ -30,11 +30,13 @@
                     <ImageBrush ImageSource="/Datos/buscar.jpg"/>
                 </Button.Background>
             </Button>
+            <!--
             <Button Height="40" Width="40" Click="Button_Click" Margin="5">
                 <Button.Background>
                     <ImageBrush ImageSource="/Datos/Borar2.png"/>
                 </Button.Background>
             </Button>
+            -->
         </ToolBar>
 
         <!-- Contenedor StackPanel para organizar los elementos verticalmente -->
