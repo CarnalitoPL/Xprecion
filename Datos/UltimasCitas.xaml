@@ -21,6 +21,9 @@
             <Button x:Name="btnCitas" Content="Citas" Width="453" Height="50" Margin="10" 
                 Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
                 FontSize="16" Click="btnCitas_Click" />
+            <Button x:Name="btnExportarPDF" Content="Exportar a PDF" Width="200" Height="50" Margin="10"
+        Background="#FF1D3DA0" Foreground="White" BorderBrush="Black"
+        FontSize="16" Click="btnExportarPDF_Click"  />
         </StackPanel>
 
         <!-- DataGrid en la segunda fila -->

@@ -247,7 +247,7 @@ namespace Xprecion.Datos
 
         private void MiInicio_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnBuscarMedico_Click(object sender, RoutedEventArgs e)

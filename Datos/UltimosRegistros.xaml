@@ -5,41 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Xprecion.Datos"
         mc:Ignorable="d"
-        Title="UltimosRegistros" Height="450" Width="830">
+        Title="UltimosRegistros" Height="450" Width="1000">
     <Grid Background="#FF51B0EF">
         <!-- Definimos filas con tamaños relativos -->
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Para el menú -->
             <RowDefinition Height="Auto"/>
             <!-- Para los botones -->
             <RowDefinition Height="*"/>
             <!-- Para el DataGrid -->
         </Grid.RowDefinitions>
 
-        <!-- Los botones en la primera fila -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+        <!-- Los botones en la segunda fila -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <!-- Botón de Médicos -->
             <Button x:Name="btnMedicos" Content="Médicos" Width="180" Height="50" Margin="10" 
-                Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
-                FontSize="16" Click="btnMedicos_Click"/>
+            Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
+            FontSize="16" Click="btnMedicos_Click"/>
 
             <!-- Botón de Áreas Médicas -->
-            <Button x:Name="btnAreasMedicas" Content="Areas Médicas" Width="180" Height="50" Margin="10" 
-                Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
-                FontSize="16" Click="btnAreasMedicas_Click"/>
+            <Button x:Name="btnAreasMedicas" Content="Áreas Médicas" Width="180" Height="50" Margin="10" 
+            Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
+            FontSize="16" Click="btnAreasMedicas_Click"/>
 
             <!-- Botón de Tipos de Rayos X -->
             <Button x:Name="btnRayosX" Content="Tipos de Rayos X" Width="180" Height="50" Margin="10" 
-                Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
-                FontSize="16" Click="btnRayosX_Click"/>
+            Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
+            FontSize="16" Click="btnRayosX_Click"/>
 
             <!-- Botón de Pacientes -->
             <Button x:Name="btnPacientes" Content="Pacientes" Width="180" Height="50" Margin="10" 
-                Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
-                FontSize="16" Click="btnPacientes_Click"/>
+            Background="#FF1D3DA0" Foreground="White" BorderBrush="Black" 
+            FontSize="16" Click="btnPacientes_Click"/>
+
+            <Button x:Name="btnimprimir" Content="Imprimir" Width="180" Height="50" Margin="10" 
+            Background="#FF6889EF" Foreground="White" BorderBrush="Black" 
+            FontSize="16" Click="btnimprimir_Click"/>
         </StackPanel>
 
-        <!-- DataGrid en la segunda fila -->
-        <DataGrid x:Name="dgRegistros" Grid.Row="1" AutoGenerateColumns="True" 
-              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+        <!-- DataGrid en la tercera fila -->
+        <DataGrid x:Name="dgRegistros" Grid.Row="2" AutoGenerateColumns="True" 
+          HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
     </Grid>
+
 </Window>
