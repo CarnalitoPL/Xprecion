@@ -26,6 +26,7 @@ namespace Xprecion.Datos
         public frmResultadoCitas()
         {
             InitializeComponent();
+            cargarfolio();
         }
         Clases.Conexion c;
         Clases.ClResultadoCitas G;
@@ -179,7 +180,7 @@ namespace Xprecion.Datos
 
         private void MiInicio_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }

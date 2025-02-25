@@ -180,6 +180,9 @@
     <Compile Include="Datos\frmResultadoCitas.xaml.cs">
       <DependentUpon>frmResultadoCitas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Datos\ReporteCitas.xaml.cs">
+      <DependentUpon>ReporteCitas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="reportes\Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -204,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Datos\frmTipoDeRayosX.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Datos\ReporteCitas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

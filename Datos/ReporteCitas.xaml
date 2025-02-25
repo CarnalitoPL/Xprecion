@@ -1,0 +1,49 @@
+﻿<Window x:Class="Xprecion.Datos.ReporteCitas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Xprecion.Datos"
+        mc:Ignorable="d"
+        Title="ReporteCitas" Height="450" Width="800">
+    <Grid Background="#FF51B0EF" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Filtros -->
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Content="Fecha:" VerticalAlignment="Center"/>
+            <DatePicker x:Name="dpFecha" Width="120" />
+
+            <Label Content="Paciente:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBox x:Name="txtPaciente" Width="150" />
+
+            <Label Content="Médico:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <TextBox x:Name="txtMedico" Width="150" />
+
+            <Button Content="Buscar" Click="BtnBuscar_Click" Width="80" Margin="10,0,0,0" Background="#FF61E28E"/>
+        </StackPanel>
+
+        <!-- DataGrid con scroll -->
+        <DataGrid x:Name="dataGridCitas" Grid.Row="1" AutoGenerateColumns="False" CanUserAddRows="False" 
+                  HeadersVisibility="Column" Margin="10" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID_CITAS}" Width="50"/>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding FECHA}" Width="100"/>
+                <DataGridTextColumn Header="Hora" Binding="{Binding HORA}" Width="80"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding ESTADOCITA}" Width="80"/>
+                <DataGridTextColumn Header="Comentario" Binding="{Binding COMENTARIO}" Width="200"/>
+                <DataGridTextColumn Header="Paciente" Binding="{Binding PACIENTE}" Width="200"/>
+                <DataGridTextColumn Header="Médico" Binding="{Binding MEDICO}" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botón de impresión -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Imprimir" Click="BtnImprimir_Click" Width="100" Height="30" Background="#FF61E28E" />
+        </StackPanel>
+    </Grid>
+</Window>

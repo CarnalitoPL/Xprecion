@@ -20,14 +20,14 @@ namespace Xprecion.Clases
         private SqlCommand cmd;
         public Conexion()
         {
-            miconexion = @"Data Source=PRADOROBOT\SQLEXPRESS;Initial Catalog=Xprecion2.0;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            miconexion = @"Data Source=PRADOROBOT\MSSQLSERVER01;Initial Catalog=Xprecion2.0;Integrated Security=True;TrustServerCertificate=True";
         }
 
         public Conexion(string sentencia)
         {
 
             sentencia1 = sentencia;
-            miconexion = @"Data Source=PRADOROBOT\SQLEXPRESS;Initial Catalog=Xprecion2.0;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            miconexion = @"Data Source=PRADOROBOT\MSSQLSERVER01;Initial Catalog=Xprecion2.0;Integrated Security=True;TrustServerCertificate=True";
         }
         public string EJECUTAR()
         {

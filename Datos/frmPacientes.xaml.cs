@@ -28,6 +28,7 @@ namespace Xprecion.Datos
         {
             InitializeComponent();
             cargarfolio();
+            DPFechaDeNacimiento.DisplayDateEnd = DateTime.Today;
         }
         Clases.Conexion c;
         Clases.ClPacientes G;
@@ -56,6 +57,23 @@ namespace Xprecion.Datos
                     textBox.Text = string.Empty;
                 if (control is DatePicker datePicker)
                     datePicker.SelectedDate = null;
+            }
+        }
+        private void txtCorreo_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (txtCorreo.Text == "ejemplo@gmail.com")
+            {
+                txtCorreo.Text = "";
+                txtCorreo.Foreground = Brushes.Black; // Cambia a negro cuando el usuario escribe
+            }
+        }
+
+        private void txtCorreo_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCorreo.Text))
+            {
+                txtCorreo.Text = "ejemplo@gmail.com";
+                txtCorreo.Foreground = Brushes.Gray; // Vuelve a gris si está vacío
             }
         }
         private void buscar()

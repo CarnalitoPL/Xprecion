@@ -70,7 +70,7 @@ namespace Xprecion
 
         private void Citas_Activas_Click(object sender, RoutedEventArgs e)
         {
-            Datos.UltimasCitas x = new Datos.UltimasCitas();
+            Datos.ReporteCitas x = new Datos.ReporteCitas();
             x.Owner = this;
             x.Show();
         }

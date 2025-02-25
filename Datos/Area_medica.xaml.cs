@@ -97,14 +97,16 @@ namespace Xprecion.Datos
                     MessageBox.Show(c.EJECUTAR(G.modificar(), G.ID_AREA1, G.AREA1));
                     LimpiarFormulario();
                     cargarfolio();
+
                 }
 
                 else
                 {
 
-                    MessageBox.Show(c.EJECUTAR(G.grabar(), G.AREA1));
+                    MessageBox.Show(c.EJECUTAR(G.grabar(), G.ID_AREA1, G.AREA1));
                     LimpiarFormulario();
                     cargarfolio();
+
                 }
 
             }

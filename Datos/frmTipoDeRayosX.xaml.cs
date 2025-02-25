@@ -104,7 +104,7 @@ namespace Xprecion.Datos
                 else
                 {
 
-                    MessageBox.Show(c.EJECUTAR(G.grabar(), G.PRECIOSERVICIO1, G.SERVICIO1));
+                    MessageBox.Show(c.EJECUTAR(G.grabar(), G.ID_TIPO_RAYOS_X1, G.PRECIOSERVICIO1, G.SERVICIO1));
                     LimpiarFormulario();
                     cargarfolio();
                 }

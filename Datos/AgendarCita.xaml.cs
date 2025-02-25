@@ -29,6 +29,8 @@ namespace Xprecion.Datos
             cargarfolio();
             CargarRayos();
 
+            DPFecha.DisplayDateStart = DateTime.Today;
+            DPFecha.BlackoutDates.Add(new CalendarDateRange(DateTime.MinValue, DateTime.Today));
         }
         Clases.Conexion c;
         Clases.ClCitas G;
@@ -219,6 +221,7 @@ namespace Xprecion.Datos
         private void btngrabar_Click(object sender, RoutedEventArgs e)
         {
             LimpiarFormulario();
+            cargarfolio();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

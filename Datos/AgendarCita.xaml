@@ -46,7 +46,7 @@
         <TextBox x:Name="txtID" Margin="232,177,448,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" IsEnabled="False"/>
         <DatePicker x:Name="DPFecha" HorizontalAlignment="Left" Margin="232,240,0,0" VerticalAlignment="Top" Height="24" Width="150" RenderTransformOrigin="0.334,-0.213"/>
         <Label Content="Estado de Cita&#xA;" HorizontalAlignment="Left" Margin="81,281,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
-        <CheckBox x:Name="ComboBEstado" Content="" HorizontalAlignment="Left" Margin="236,292,0,0" VerticalAlignment="Top" Height="15" Width="71"/>
+        <CheckBox x:Name="ComboBEstado" Content="" HorizontalAlignment="Left" Margin="236,292,0,0" VerticalAlignment="Top" Height="15" Width="71" IsChecked="True"/>
         <Label Content="Comentario" HorizontalAlignment="Left" Margin="81,320,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>
         <TextBox x:Name="txtComentario" MaxLength="200" Margin="232,324,295,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="76" FontSize="14" BorderBrush="#7F8C8D" BorderThickness="2" Padding="5" UndoLimit="2" KeyDown="txtComentario_KeyDown"/>
         <Label Content="Tipo de rayos x" HorizontalAlignment="Left" Margin="74,429,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FF3498DB"/>

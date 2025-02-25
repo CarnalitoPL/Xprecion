@@ -12,11 +12,11 @@ namespace Xprecion.Clases
         {
             //cambio para probar
             static public string dbn = "CEDOTOYA";
-            static public string server = "LAPTOP-348QMSO7";
+            static public string server = "Pradorobot";
             static public string Password = "";
             static public string seguridad = "Integrated Security=True";
             static public string UserID = "Administrador";
-            static public string miconexion = @"Data Source=PRADOROBOT\SQLEXPRESS;Initial Catalog=Xprecion2.0;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+            static public string miconexion = @"Data Source=PRADOROBOT\MSSQLSERVER01;Initial Catalog=Xprecion2.0;Integrated Security=True;TrustServerCertificate=True";
         }
     }
 }

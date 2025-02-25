@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Xprecion.Datos"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
         Title="frmPacientes" Height="675" Width="800">
     <Grid x:Name="GridPacientes" Background="#F4F4F9">
@@ -72,7 +73,7 @@
             <DatePicker x:Name="DPFechaDeNacimiento" FontSize="14" BorderBrush="#3498db" BorderThickness="2" Padding="5" Grid.Row="4" Grid.Column="1" Height="35" Margin="10"/>
 
             <Label Content="Correo Electrónico" FontSize="16" FontWeight="Bold" Foreground="#3498db" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
-            <TextBox x:Name="txtCorreo" FontSize="14" BorderBrush="#3498db" BorderThickness="2" Padding="5" Grid.Row="5" Grid.Column="1" Height="35" Margin="10" />
+            <TextBox x:Name="txtCorreo" FontSize="14" Text="ejemplo@gmail.com" BorderBrush="#3498db" BorderThickness="2" Padding="5" Grid.Row="5" Grid.Column="1" Height="35" Margin="10" GotFocus="txtCorreo_GotFocus" LostFocus="txtCorreo_LostFocus" Background="{x:Null}" Foreground="#FF837575"/>
 
             <Label Content="Dirección" FontSize="16" FontWeight="Bold" Foreground="#3498db" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Margin="10"/>
             <TextBox x:Name="txtDireccion" FontSize="14" BorderBrush="#3498db" BorderThickness="2" Padding="5" Grid.Row="6" Grid.Column="1" Height="35" Margin="10"/>
